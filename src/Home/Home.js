@@ -12,12 +12,12 @@ const Home = () => {
         }
         function getPosition(position) {
             console.log(position.coords.latitude, position.coords.longitude);
-            let loc = `http://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=b6ce0db922efeb887782e1b76749bc61&units=metric`
+            let loc = `https://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=b6ce0db922efeb887782e1b76749bc61&units=metric`
             axios.get(loc)
                 .then(response => {
                     // console.log(response)
                     setData(response.data.list);
-                }) 
+                })
         }
     }, [])
     return (

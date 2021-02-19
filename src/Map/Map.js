@@ -38,7 +38,7 @@ const Map = () => {
     async function buttonClick() {
         setCurrentPos(false);
         setIsVisible(false);
-        const response = await axios.get(`http://api.openweathermap.org/data/2.5/weather?lat=${currentPos.lat}&lon=${currentPos.lng}&appid=b6ce0db922efeb887782e1b76749bc61&units=metric`)
+        const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${currentPos.lat}&lon=${currentPos.lng}&appid=b6ce0db922efeb887782e1b76749bc61&units=metric`)
         setWeather(response.data)
         console.log(response.data)
     }

@@ -14,7 +14,7 @@ const City = (props) => {
     }
     const [search, setSearch] = useState("")
     async function searchHandler() {
-        const response = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${search}&appid=b6ce0db922efeb887782e1b76749bc61&units=metric`)
+        const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=b6ce0db922efeb887782e1b76749bc61&units=metric`)
         setWeather(response.data)
         setIsVisible(true)
     }
@@ -25,7 +25,7 @@ const City = (props) => {
         <div>
 
             <div className="ci">
-            <label  className="bel" for="Search" >Enter the Place :</label>
+                <label className="bel" for="Search" >Enter the Place :</label>
                 <input className="lab" id="Search" type="text" name="search" onChange={inputChangedHandler} placeholder="Enter the Place"></input><br></br>
                 <button className="but" variant="primary" onClick={searchHandler}>Search</button>
             </div>
@@ -58,7 +58,7 @@ const City = (props) => {
                                 Today's Forecast for {weather.name}
 
                             </div>
-                            
+
                         </div>
                     </section>
 
